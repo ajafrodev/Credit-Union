@@ -1,7 +1,8 @@
 public class Customer {
-    private String name;
+
+    private final String name;
     private int investment;
-    private long time_in;
+    private final long time_in;
     private int posInQueue;
 
     public Customer(String name, int investment, long time_in) {
@@ -35,17 +36,14 @@ public class Customer {
         return diff;
     }
 
-    //includes time_in
     public String toString() {
         return name + ", " + investment + ", " + time_in;
     }
 
-    //includes posInQueue
     public String toStringWithPos() {
         return name + ", " + investment + ", " + posInQueue;
     }
 
-    //does not include time_in
     public String toStringForTesting() {
         return name + ", " + investment;
     }
@@ -57,4 +55,5 @@ public class Customer {
     public void setPosInQueue(int pos) {
         this.posInQueue = pos;
     }
+
 }
